@@ -29,6 +29,6 @@ node {
     
     stage('Trigger ManifestUpdate') {
                 echo "triggering updatemanifestjob"
-                build job: 'kubernetesmanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                build job: 'devops-flaskmanifest', parameters: [string(name: 'DOCKER_TAG', value: env.BUILD_NUMBER)]
         }
 }
